@@ -1,0 +1,67 @@
+:root{
+    --nav-color: #519872;
+    --text-color: #382933;
+    --main-color: #3B5249;
+    --card-color: #A4B494;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+.nav-container {
+    grid-column: 1 / 2;
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+}
+.main-container {
+    grid-column: 2 / 6;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    gap: 5px;
+    padding: 10px;
+}
+.header-bar {
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr / 1fr 3fr;
+    background-color: var(--card-color);
+}
+form{
+    grid-column: 1 / 2;
+}
+.profile-icon {
+    grid-column: 2 / 6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.profile-links {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 2fr 5fr;
+}
+
+.main-body {
+    grid-row: 2 / 6;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
+}
+.projects {
+    display: grid;
+    grid-template: 1fr repeat(3, 5fr) / 1fr 1fr;
+    gap: 8px;
+}
+
+.projects > h4 {
+    grid-column: 1 / 3;
+}
+.cards, .feed {
+    background-color: var(--card-color);
+}
